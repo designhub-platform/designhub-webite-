@@ -1,3 +1,10 @@
+# 1.0.0 (2024-09-19)
+
+
+### Features
+
+* Supabase integration, ShadCNUI, and various configurations ([74d8720](https://github.com/designhub-platform/designhub-webite/commit/74d8720f1b32c80e1d5670d9b16d115ed77d8e2b))
+
 # [3.58.0](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.57.0...v3.58.0) (2024-09-15)
 
 
