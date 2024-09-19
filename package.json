@@ -1,7 +1,9 @@
 {
+
   "name": "design-hub",
   "version": "3.58.0",
   "author": "Design Hub",
+
   "scripts": {
     "dev:spotlight": "spotlight-sidecar",
     "dev:next": "next dev",
