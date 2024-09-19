@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/designhub-platform/designhub-webite/compare/v1.0.0...v1.1.0) (2024-09-19)
+
+
+### Features
+
+* add localization (es, pt), remove fr.json, update AppConfig.ts ([39fe330](https://github.com/designhub-platform/designhub-webite/commit/39fe33006400d496335009804d2d90901a39fa4f))
+* add Sentry integration with environment-based configuration ([22a5605](https://github.com/designhub-platform/designhub-webite/commit/22a560548508f96514558b01f9368d05472773b4))
+
 # 1.0.0 (2024-09-19)
 
 
