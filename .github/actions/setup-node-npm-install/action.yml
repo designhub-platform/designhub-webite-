@@ -1,20 +1,13 @@
 name: 'Setup Node + NPM + Install Dependencies'
 description: 'Setup Node + NPM + Install Dependencies'
-
-inputs:
-  node-version:
-    description: 'The version of Node.js to use'
-    required: true
-    default: '20.x'
-
 runs:
-  using: composite
+  using: 'composite'
   steps:
     - uses: actions/setup-node@v3
       with:
         node-version: ${{ inputs.node-version }}
-        cache: npm
-
+        cache: 'npm'
+        
     - name: 📦 Install Project Dependencies
       run: npm ci
       shell: bash
