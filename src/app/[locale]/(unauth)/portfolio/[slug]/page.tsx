@@ -10,11 +10,11 @@ type IPortfolioDetailProps = {
 
 export function generateStaticParams() {
   return AppConfig.locales
-    .map(locale =>
-      Array.from(Array(6).keys()).map(elt => ({
+    .map((locale) =>
+      Array.from(Array(6).keys()).map((elt) => ({
         slug: `${elt}`,
         locale,
-      })),
+      }))
     )
     .flat(1);
 }
@@ -44,15 +44,12 @@ const PortfolioDetail = (props: IPortfolioDetailProps) => {
         {`${t('log_management_powered_by')} `}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-          href="https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate"
-        >
+          href="https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate">
           Better Stack
         </a>
       </div>
 
-      <a
-        href="https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate"
-      >
+      <a href="https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate">
         <Image
           className="mx-auto mt-2"
           src="/assets/images/better-stack-dark.png"

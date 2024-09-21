@@ -11,17 +11,16 @@ describe('Base template', () => {
       render(
         <NextIntlClientProvider locale="en" messages={messages}>
           <BaseTemplate
-            leftNav={(
+            leftNav={
               <>
                 <li>link 1</li>
                 <li>link 2</li>
                 <li>link 3</li>
               </>
-            )}
-          >
+            }>
             {null}
           </BaseTemplate>
-        </NextIntlClientProvider>,
+        </NextIntlClientProvider>
       );
 
       const menuItemList = screen.getAllByRole('listitem');
@@ -33,7 +32,7 @@ describe('Base template', () => {
       render(
         <NextIntlClientProvider locale="en" messages={messages}>
           <BaseTemplate leftNav={<li>1</li>}>{null}</BaseTemplate>
-        </NextIntlClientProvider>,
+        </NextIntlClientProvider>
       );
 
       const copyrightSection = screen.getByText(/© Copyright/);
@@ -45,10 +44,7 @@ describe('Base template', () => {
        * The link doesn't need to appear on every pages, one link on one page is enough.
        * Thank you for your support it'll mean a lot for us.
        */
-      expect(copyrightLink).toHaveAttribute(
-        'href',
-        'https://creativedesignsguru.com',
-      );
+      expect(copyrightLink).toHaveAttribute('href', 'https://creativedesignsguru.com');
     });
   });
 });

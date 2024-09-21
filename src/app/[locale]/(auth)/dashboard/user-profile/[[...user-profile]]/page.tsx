@@ -16,9 +16,7 @@ export async function generateMetadata(props: { params: { locale: string } }) {
 
 const UserProfilePage = (props: { params: { locale: string } }) => (
   <div className="my-6 -ml-16">
-    <UserProfile
-      path={getI18nPath('/dashboard/user-profile', props.params.locale)}
-    />
+    <UserProfile path={getI18nPath('/dashboard/user-profile', props.params.locale)} />
   </div>
 );
 

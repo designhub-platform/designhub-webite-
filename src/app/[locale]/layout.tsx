@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return AppConfig.locales.map(locale => ({ locale }));
+  return AppConfig.locales.map((locale) => ({ locale }));
 }
 
 export default function RootLayout(props: {
@@ -48,10 +48,7 @@ export default function RootLayout(props: {
   return (
     <html lang={props.params.locale}>
       <body>
-        <NextIntlClientProvider
-          locale={props.params.locale}
-          messages={messages}
-        >
+        <NextIntlClientProvider locale={props.params.locale} messages={messages}>
           {props.children}
 
           <DemoBadge />
