@@ -21,16 +21,15 @@
     "build-stats": "cross-env ANALYZE=true npm run build",
 
     "clean": "rimraf .next out coverage",
-<<<<<<< HEAD
 
     "lint": "eslint .",
 
     "lint:fix": "eslint . --fix",
 
-=======
+
     "lint": "eslint . && prettier --check .",
     "lint:fix": "eslint . --fix && prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
->>>>>>> origin/setup-ci
+
     "check-types": "tsc --noEmit --pretty",
 
     "test": "vitest run",
