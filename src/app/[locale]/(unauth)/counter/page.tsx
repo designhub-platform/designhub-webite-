@@ -35,15 +35,12 @@ const Counter = () => {
         {`${t('error_reporting_powered_by')} `}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-          href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo"
-        >
+          href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo">
           Sentry
         </a>
       </div>
 
-      <a
-        href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo"
-      >
+      <a href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo">
         <Image
           className="mx-auto mt-2"
           src="/assets/images/sentry-dark.png"

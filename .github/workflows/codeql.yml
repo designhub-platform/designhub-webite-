@@ -1,0 +1,67 @@
+name: CodeQL Advanced
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '35 2 * * 0' # Agendado para rodar todo domingo às 02:35
+
+jobs:
+  analyze:
+    name: Analyze (${{ matrix.language }})
+    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+
+    permissions:
+      security-events: write
+      packages: read
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: javascript-typescript
+            build-mode: none
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Inicializa as ferramentas do CodeQL para escanear
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+          queries: +security-extended,security-and-quality # Consultas customizadas para melhorar a análise
+
+      # Se o modo de build for manual, pode-se customizar os comandos de build aqui
+      - if: matrix.build-mode == 'manual'
+        shell: bash
+        run: |
+          echo 'Configure os comandos de build manualmente aqui, como:'
+          echo '  npm install'
+          echo '  npm run build'
+          exit 1
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: '/language:${{matrix.language}}'
+
+      # Adiciona passo para criar issues automáticas para vulnerabilidades críticas
+      - name: Create GitHub Issue on Critical Vulnerability
+        uses: actions/github-script@v6
+        if: ${{ steps.analyze.outputs.vulnerability-severity == 'critical' }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'Critical vulnerability found!',
+              body: 'A critical vulnerability was detected in the recent analysis. Please review.'
+            })

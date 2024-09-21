@@ -9,8 +9,7 @@ const Sponsors = () => (
           <a
             href="https://clerk.com?utm_source=github&utm_medium=sponsorship&utm_campaign=nextjs-boilerplate"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
             <Image
               src="/assets/images/clerk-logo-dark.png"
               alt="Clerk – Authentication & User Management for Next.js"
@@ -21,26 +20,15 @@ const Sponsors = () => (
         </td>
         <td className="border-2 border-gray-300 p-3">
           <a href="https://l.crowdin.com/next-js" target="_blank" rel="noopener">
-            <Image
-              src="/assets/images/crowdin-dark.png"
-              alt="Crowdin"
-              width={260}
-              height={224}
-            />
+            <Image src="/assets/images/crowdin-dark.png" alt="Crowdin" width={260} height={224} />
           </a>
         </td>
         <td className="border-2 border-gray-300 p-3">
           <a
             href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo"
             target="_blank"
-            rel="noopener"
-          >
-            <Image
-              src="/assets/images/sentry-dark.png"
-              alt="Sentry"
-              width={260}
-              height={224}
-            />
+            rel="noopener">
+            <Image src="/assets/images/sentry-dark.png" alt="Sentry" width={260} height={224} />
           </a>
         </td>
       </tr>
@@ -49,8 +37,7 @@ const Sponsors = () => (
           <a
             href="https://posthog.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
             <Image
               src="https://posthog.com/brand/posthog-logo.svg"
               alt="PostHog"
@@ -63,8 +50,7 @@ const Sponsors = () => (
           <a
             href="https://betterstack.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
             <Image
               src="/assets/images/better-stack-dark.png"
               alt="Better Stack"
@@ -77,8 +63,7 @@ const Sponsors = () => (
           <a
             href="https://www.checklyhq.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=next-js-boilerplate"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
             <Image
               src="/assets/images/checkly-logo-light.png"
               alt="Checkly"

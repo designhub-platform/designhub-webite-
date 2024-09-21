@@ -26,7 +26,10 @@ if (process.env.NEXT_PHASE !== PHASE_PRODUCTION_BUILD && Env.DATABASE_URL) {
     migrationsFolder: path.join(process.cwd(), 'migrations'),
   });
 } else {
-  const global = globalThis as unknown as { client: PGlite; drizzle: PgliteDatabase<typeof schema> };
+  const global = globalThis as unknown as {
+    client: PGlite;
+    drizzle: PgliteDatabase<typeof schema>;
+  };
 
   if (!global.client) {
     global.client = new PGlite();
