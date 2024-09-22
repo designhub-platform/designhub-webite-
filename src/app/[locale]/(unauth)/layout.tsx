@@ -14,7 +14,7 @@ export default function Layout(props: { children: React.ReactNode; params: { loc
     <>
       <DemoBanner />
       <BaseTemplate
-        leftNav={
+        leftNav={(
           <>
             <li>
               <Link href="/" className="border-none text-gray-700 hover:text-gray-900">
@@ -39,13 +39,14 @@ export default function Layout(props: { children: React.ReactNode; params: { loc
             <li>
               <a
                 className="border-none text-gray-700 hover:text-gray-900"
-                href="https://github.com/ixartz/Next-js-Boilerplate">
+                href="https://github.com/ixartz/Next-js-Boilerplate"
+              >
                 GitHub
               </a>
             </li>
           </>
-        }
-        rightNav={
+        )}
+        rightNav={(
           <>
             <li>
               <Link href="/sign-in/" className="border-none text-gray-700 hover:text-gray-900">
@@ -63,7 +64,8 @@ export default function Layout(props: { children: React.ReactNode; params: { loc
               <LocaleSwitcher />
             </li>
           </>
-        }>
+        )}
+      >
         <div className="py-5 text-xl [&_p]:my-6">{props.children}</div>
       </BaseTemplate>
     </>

@@ -27,7 +27,8 @@ export default function Index(props: { params: { locale: string } }) {
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://twitter.com/ixartz"
           target="_blank"
-          rel="noreferrer noopener">
+          rel="noreferrer noopener"
+        >
           @Ixartz on Twitter
         </a>
         {` for updates and more information about the boilerplate.`}
@@ -37,10 +38,12 @@ export default function Index(props: { params: { locale: string } }) {
       </h2>
       <p className="text-base">
         Next.js Boilerplate is a developer-friendly starter code for Next.js projects, built with
-        Tailwind CSS and TypeScript.{' '}
+        Tailwind CSS and TypeScript.
+        {' '}
         <span role="img" aria-label="zap">
           ⚡️
-        </span>{' '}
+        </span>
+        {' '}
         Designed with developer experience in mind, it includes:
       </p>
       <ul className="mt-3 text-base">
@@ -48,20 +51,25 @@ export default function Index(props: { params: { locale: string } }) {
         <li>🔥 TypeScript for type checking</li>
         <li>💎 Tailwind CSS integration</li>
         <li>
-          🔒 Authentication with{' '}
+          🔒 Authentication with
+          {' '}
           <a
             className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
-            href="https://clerk.com?utm_source=github&amp;utm_medium=sponsorship&amp;utm_campaign=nextjs-boilerplate">
+            href="https://clerk.com?utm_source=github&amp;utm_medium=sponsorship&amp;utm_campaign=nextjs-boilerplate"
+          >
             Clerk
-          </a>{' '}
+          </a>
+          {' '}
           (includes passwordless, social, and multi-factor auth)
         </li>
         <li>📦 ORM with DrizzleORM (PostgreSQL, SQLite, MySQL support)</li>
         <li>
-          🌐 Multi-language support (i18n) with next-intl and{' '}
+          🌐 Multi-language support (i18n) with next-intl and
+          {' '}
           <a
             className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
-            href="https://l.crowdin.com/next-js">
+            href="https://l.crowdin.com/next-js"
+          >
             Crowdin
           </a>
         </li>
@@ -74,7 +82,8 @@ export default function Index(props: { params: { locale: string } }) {
           🚨 Error monitoring (
           <a
             className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
-            href="https://sentry.io/for/nextjs/?utm_source=github&amp;utm_medium=paid-community&amp;utm_campaign=general-fy25q1-nextjs&amp;utm_content=github-banner-nextjsboilerplate-logo">
+            href="https://sentry.io/for/nextjs/?utm_source=github&amp;utm_medium=paid-community&amp;utm_campaign=general-fy25q1-nextjs&amp;utm_content=github-banner-nextjsboilerplate-logo"
+          >
             Sentry
           </a>
           ) and logging (Pino.js)

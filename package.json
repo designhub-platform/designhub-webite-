@@ -2,6 +2,9 @@
   "name": "design-hub",
   "version": "1.1.0",
   "author": "Design Hub",
+  "engines": {
+    "node": ">=20.x"
+  },
   "scripts": {
     "dev:spotlight": "spotlight-sidecar",
     "dev:next": "next dev",
@@ -25,9 +28,6 @@
     "serve-storybook": "run-s storybook:*",
     "test-storybook:ci": "start-server-and-test serve-storybook http://127.0.0.1:6006 test-storybook",
     "prepare": "husky"
-  },
-  "engines": {
-    "node": ">=20.x"
   },
   "dependencies": {
     "@clerk/localizations": "^2.8.1",

@@ -1,6 +1,6 @@
 name: Checkly
 
-#on: [deployment_status]
+# on: [deployment_status]
 
 env:
   CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}

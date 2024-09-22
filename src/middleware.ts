@@ -11,7 +11,7 @@ const intlMiddleware = createMiddleware({
 });
 
 export default async function middleware(
-  request: NextRequest
+  request: NextRequest,
   // event: NextFetchEvent,
 ) {
   await updateSession(request);

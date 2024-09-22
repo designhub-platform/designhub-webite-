@@ -26,7 +26,8 @@ export default function About(props: { params: { locale: string } }) {
         {`${t('translation_powered_by')} `}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-          href="https://l.crowdin.com/next-js">
+          href="https://l.crowdin.com/next-js"
+        >
           Crowdin
         </a>
       </div>

@@ -32,7 +32,6 @@ jobs:
 
       - name: 📦 Setup Node + NPM + install deps
         uses: ./.github/actions/setup-node-npm-install
-        
 
       - name: 🏃‍♂️ Run ESLint PR
         if: github.event_name == 'pull_request'

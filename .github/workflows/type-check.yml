@@ -33,7 +33,7 @@ jobs:
         uses: reviewdog/action-setup@v1
 
       - name: 🏃‍♂️ Run TypeScript PR # Reviewdog tsc errorformat: %f:%l:%c - error TS%n: %m
-        # Wonly need to add the reviewdog step if it's a pull requeste 
+        # Wonly need to add the reviewdog step if it's a pull requeste
         if: github.event_name == 'pull_request'
         run: |
           npm run check-types | reviewdog -name="tsc" -efm="%f(%l,%c): error TS%n: %m" -reporter="github-pr-review" -filter-mode="nofilter" -fail-on-error -tee
