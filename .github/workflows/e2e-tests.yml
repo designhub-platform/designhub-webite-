@@ -31,7 +31,7 @@ jobs:
 
       - name: Build Next.js for E2E tests
         run: npm run build
-        #env:
+        # env:
           # SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
       - name: Install Playwright (used for Storybook and E2E tests)
@@ -52,4 +52,3 @@ jobs:
           name: e2e-test-results
           path: test-results/
           retention-days: 7
-          
