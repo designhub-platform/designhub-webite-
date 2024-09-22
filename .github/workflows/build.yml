@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: [Run Linting]
     types:
-      - completed
+      - success
   push:
     branches: [main]
   pull_request:
