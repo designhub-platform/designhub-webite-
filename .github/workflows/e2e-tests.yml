@@ -12,7 +12,6 @@ on:
 
 jobs:
   e2e-test:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     strategy:
       matrix:
         node-version: [20.x]
@@ -22,7 +21,7 @@ jobs:
 
     steps:
       - name: 📦 Checkout project repo
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Retrieve Git history, needed to verify commits
 
