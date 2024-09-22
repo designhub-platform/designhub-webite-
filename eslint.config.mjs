@@ -6,7 +6,7 @@ import playwright from 'eslint-plugin-playwright';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tailwind from 'eslint-plugin-tailwindcss';
 import testingLibrary from 'eslint-plugin-testing-library';
-import { components } from 'storybook/internal/components';
+//import { components } from 'storybook/internal/components';
 
 export default antfu(
   {
