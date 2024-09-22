@@ -16,7 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: 📦 Checkout project repo
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Retrieve Git history, needed to verify commits
 
@@ -25,10 +26,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Run unit tests
+      - name: 🏃🏾‍♂️ Run unit tests
         run: npm run test -- --coverage
 
-      #   - name: Upload coverage reports to Codecov
+      #   - name: ✅ Upload coverage reports to Codecov
       #     uses: codecov/codecov-action@v4
       #     env:
       #       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

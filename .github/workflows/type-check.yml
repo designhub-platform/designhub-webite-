@@ -7,7 +7,7 @@
 
 # 🚨 GITHUB SECRETS REQUIRED: NONE
 
-name: Type Check (tsc)
+name: Type Check
 
 on:
   push:
