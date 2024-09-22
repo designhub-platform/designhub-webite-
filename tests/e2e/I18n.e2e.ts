@@ -6,7 +6,9 @@ test.describe('I18n', () => {
       await page.goto('/');
 
       await expect(
-        page.getByRole('heading', { name: 'Boilerplate Code for Your Next.js Project with Tailwind CSS' }),
+        page.getByRole('heading', {
+          name: 'Boilerplate Code for Your Next.js Project with Tailwind CSS',
+        }),
       ).toBeVisible();
 
       await page.getByRole('link', { name: 'About' }).click();
