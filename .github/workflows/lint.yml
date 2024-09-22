@@ -43,7 +43,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
-          eslint_flags: '. --ext .js,.jsx,.ts,.tsx'
+          eslint_flags: '.'
 
       - name: 🏃‍♂️ Run ESLint
         if: github.event_name != 'pull_request'
