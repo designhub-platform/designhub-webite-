@@ -6,6 +6,7 @@ import playwright from 'eslint-plugin-playwright';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tailwind from 'eslint-plugin-tailwindcss';
 import testingLibrary from 'eslint-plugin-testing-library';
+import { components } from 'storybook/internal/components';
 
 export default antfu(
   {
@@ -67,6 +68,8 @@ export default antfu(
       'no-unused-vars': 'warn',
       'unused-imports/no-unused-vars': 'warn',
       'unused-imports/no-unused-imports': 'warn',
+      'react-refresh/only-export-componentes':'off',
+      'eslint-disable-next-line':'off'
     },
   },
 );
