@@ -32,7 +32,7 @@ jobs:
       - name: Build Next.js for E2E tests
         run: npm run build
         # env:
-          # SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        #   SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
       - name: Install Playwright (used for Storybook and E2E tests)
         run: npx playwright install --with-deps
