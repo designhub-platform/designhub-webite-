@@ -1,8 +1,8 @@
-name: build
+name: Build Project
 
 on:
   workflow_run:
-    workflows: [lint]
+    workflows: [Run Linting]
     types:
       - completed
   push:
@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Build Next.js
+      - name: 🏃🏾‍♂️ Build Next.js
         run: npm run build
         env:
         # SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}

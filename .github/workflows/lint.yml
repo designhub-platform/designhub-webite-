@@ -7,7 +7,7 @@
 
 # 🚨 GITHUB SECRETS REQUIRED: NONE
 
-name: Run Linting (eslint, prettier)
+name: Run Linting
 
 on:
   push:
