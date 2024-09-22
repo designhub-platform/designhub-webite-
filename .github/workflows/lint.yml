@@ -1,13 +1,4 @@
-# ✍️ Description:
-# This action is used to run eslint checks
-# Runs on pull requests and pushes to the main/master branches
-# Based on the event type:
-#   - If it's a pull request, it will run eslint, then add the check to the PR as well as annotate the code with the errors and warnings.
-#   - If it's a push to main/master, it will run the type checking and fail if there are any errors.
-
-# 🚨 GITHUB SECRETS REQUIRED: NONE
-
-name: Run Linting (eslint, prettier)
+name: Run Linting
 
 on:
   push:
@@ -26,15 +17,19 @@ jobs:
 
     steps:
       - name: 📦 Checkout project repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: 📦 Setup Node + NPM + install deps
-        uses: ./.github/actions/setup-node-npm-install
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
 
-      - name: 🏃‍♂️ Run ESLint PR
-        if: github.event_name == 'pull_request'
+      - run: npm install
+        name: Install Dependencies
+
+      - name: 🏃‍♂️ Run ESLint
         run: npm run lint
 
       - name: 🏃‍♂️ Report ESLint Results
@@ -43,8 +38,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
-          eslint_flags: '. --ext .js,.jsx,.ts,.tsx'
+          eslint_flags: 'src/'
+          fail_on_error: true  # Fail the action on ESLint errors
 
-      - name: 🏃‍♂️ Run ESLint
+      - name: 🏃‍♂️ Run ESLint on Push
         if: github.event_name != 'pull_request'
         run: npm run lint
