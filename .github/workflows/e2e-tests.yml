@@ -25,14 +25,14 @@ jobs:
           fetch-depth: 0 # Retrieve Git history, needed to verify commits
 
       - name: 📦 Setup Node + NPM + install deps
-      uses: ./.github/actions/setup-node-npm-install
-      with:
-        node-version: ${{ matrix.node-version }}
+        uses: ./.github/actions/setup-node-npm-install
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: Build Next.js for E2E tests
         run: npm run build
-        env:
-     #     SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        #env:
+          # SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
 
       - name: Install Playwright (used for Storybook and E2E tests)
         run: npx playwright install --with-deps
@@ -40,10 +40,11 @@ jobs:
       - name: Run storybook tests
         run: npm run test-storybook:ci
 
-   #   - name: Run E2E tests
-   #     run: npx percy exec -- npm run test:e2e
-   #     env:
-   #       PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      # Uncomment the following step to run E2E tests
+      # - name: Run E2E tests
+      #   run: npx percy exec -- npm run test:e2e
+      #   env:
+      #     PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
       - uses: actions/upload-artifact@v3
         if: always()
