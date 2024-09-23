@@ -5,10 +5,7 @@ on:
     workflows: [Build Project]
     types:
       - success
-  push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
+  
 
 jobs:
   e2e-test:
