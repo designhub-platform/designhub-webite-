@@ -1,12 +1,6 @@
 name: Build Project
 
 on:
-  pull_request:
-    branches:
-      - main  # ou a branch que você deseja monitorar
-  push:
-    branches:
-      - main  # ou a branch que você deseja monitorar
   workflow_run:
     workflows: [Run Linting]  # Nome do seu workflow de lint
     types:
