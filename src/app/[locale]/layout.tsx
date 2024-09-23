@@ -7,6 +7,7 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { AppConfig } from '@/utils/AppConfig';
 import { Providers } from '@/providers';
 import { cn } from '@/lib/utils';
+import { BottomMenu } from '@/components/shared/bottom-menu';
 
 export const metadata: Metadata = {
   icons: [
@@ -66,7 +67,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
           <main className="flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-cyan-100 py-32">
             {children}
           </main>
-          {/* <BottomMenu /> */}
+          <BottomMenu />
         </Providers>
       </body>
     </html>
