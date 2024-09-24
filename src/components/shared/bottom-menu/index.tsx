@@ -1,11 +1,7 @@
 'use client'
-
-//import { BiSolidUser, BiUser } from "react-icons/bi";
-import { FaCompass, FaCrown, FaRegCompass,FaSearch } from "react-icons/fa";
-//import { GiProgression } from "react-icons/gi";
+import { BiSolidUser, BiUser } from "react-icons/bi";
 import { GoHome, GoHomeFill } from "react-icons/go";
-//import { IoIosAddCircle } from "react-icons/io";
-//import { LiaCrownSolid } from "react-icons/lia";
+import { BsFillGridFill, BsGrid, BsSearch } from "react-icons/bs";
 
 
 import { BottomMenuFragments } from "./fragments";
@@ -14,28 +10,28 @@ export function BottomMenu() {
   return (
     <BottomMenuFragments.Root>
       <BottomMenuFragments.Icon
-        href="/home"
+        href="/"
         icon={GoHome}
         iconActive={GoHomeFill}
       />
       <BottomMenuFragments.Icon
-        href="/desempenho"
-        icon={FaSearch}
-        iconActive={FaSearch}
+        href="/designs"
+        icon={BsGrid}
+        iconActive={BsFillGridFill}
       />
 
 
       <BottomMenuFragments.Icon
         href="/explorar"
-        icon={FaRegCompass}
-        iconActive={FaCompass}
+        icon={BsSearch}
+        iconActive={BsSearch}
       />
 
       
       <BottomMenuFragments.Icon
-        href="/plus"
-        icon={FaCrown}
-        iconActive={FaCrown}
+        href="/perfil"
+        icon={BiUser}
+        iconActive={BiSolidUser}
       />
     </BottomMenuFragments.Root>
   );
