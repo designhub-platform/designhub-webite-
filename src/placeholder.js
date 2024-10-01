@@ -1,3 +1,1 @@
-const placeholder = () => {
- return 'Hello World';
-};
+const placeholder =  'Hello World';
