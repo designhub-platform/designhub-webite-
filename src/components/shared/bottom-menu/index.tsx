@@ -1,6 +1,8 @@
 'use client'
-import { BiSolidUser, BiUser } from "react-icons/bi";
+import { BiSolidUser } from "react-icons/bi";
 import { GoHome, GoHomeFill } from "react-icons/go";
+import { IoSearchOutline } from "react-icons/io5";
+import { FiUser } from "react-icons/fi";
 import { BsFillGridFill, BsGrid, BsSearch } from "react-icons/bs";
 
 
@@ -23,14 +25,14 @@ export function BottomMenu() {
 
       <BottomMenuFragments.Icon
         href="/explorar"
-        icon={BsSearch}
+        icon={IoSearchOutline}
         iconActive={BsSearch}
       />
 
       
       <BottomMenuFragments.Icon
         href="/perfil"
-        icon={BiUser}
+        icon={FiUser}
         iconActive={BiSolidUser}
       />
     </BottomMenuFragments.Root>
