@@ -1,1 +1,3 @@
-console.log('Placeholder for ESLint');
+const placeholder = () => {
+ return 'Hello World';
+};
