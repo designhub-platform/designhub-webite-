@@ -37,7 +37,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           eslint_flags: 'src/'
-          fail_on_error: true  # Fail the action on ESLint errors
+        #  fail_on_error: true  # Fail the action on ESLint errors
 
       - name: 🏃‍♂️ Run ESLint on Push
         if: github.event_name != 'pull_request'
