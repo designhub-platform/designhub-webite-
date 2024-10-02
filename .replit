@@ -13,4 +13,3 @@ externalPort = 3000
 
 [[ports]]
 localPort = 8969
-externalPort = 80
